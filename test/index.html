@@ -1,0 +1,54 @@
+<html>
+	<head>
+		<title></title>
+		<link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<script src="../lib/jquery-1.11.3.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../dist/superSelect.js"></script>
+	</head>
+	<body>
+		<div id="select" >
+		<select multiple="multiple" >
+			<option value="01">1</option>
+			<option value="02">2</option>
+			<option value="03">3</option>
+			<option value="04">4</option>
+			<option value="05">5</option>
+			<optgroup label="group 1">1</optgroup>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<optgroup  label="group 2">2</optgroup>
+			<option value="21">21</option>
+			<option value="22">22</option>
+			<option value="23">23</option>
+			<option value="24">24</option>
+			<option value="25">25</option>
+		</select>
+		</div>
+<ul id="accordion" role="tablist" aria-multiselectable="true">
+    <li data-toggle="collapse"  href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      Collapsible Group Item #1
+    </li>
+    <ul id="collapseOne" class="panel-collapse collapse in">
+        <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		</li>
+    </ul>
+	<li data-toggle="collapse"  href="#collapse2" aria-expanded="true" aria-controls="collapse2">
+      Collapsible Group Item #1
+    </li>
+    <ul id="collapse2" class="panel-collapse collapse in">
+        <li>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		</li>
+    </ul>
+</ul>
+
+		<script>
+			$(function(){
+				var superselect = new SuperSelect("#select",{"overflowY":"auto","height":"250px","width":"300px"});
+			})
+		</script>
+	</body>
+</html>
