@@ -13,7 +13,9 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-/* SuperSelect v1.0.0 - (c) License: Apache 2.0 */
+/* SuperSelect v1.0.0 - (c) License: Apache 2.0 
+ * https://github.com/jhao/supperSelect
+ */
 /// <reference path="../lib/jquery-1.11.3.js" />
 /// <reference path="../lib/bootstrap/js/bootstrap.js" />
 (function($){
@@ -82,7 +84,17 @@
 			for (var index = 0; index < childElements.length; index++) {
 				var element = childElements[index];
 				var eachElement = $("<li class='list-group-item subItem'></li>").append(element.html()).attr("data-value",element.val());
-				eachElement.on("click",function () {
+				eachElement.on("mousedown", function (event) {
+				    if (!event.ctrlKey && !event.shiftKey)
+				    {
+				        $("option:selected", root._select).each(function () {
+				            $(this).attr("selected", false);
+				        });
+				        $(".active", root._el).each(function () {
+				            $(this).removeClass("active");
+				        })
+                    
+				    }
 					var selectOption = $("option[value='" + $(this).attr("data-value")+"']", root._select);
 					if(!$(this).hasClass("active")) {
 						$(this).addClass("active");
